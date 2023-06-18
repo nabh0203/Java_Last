@@ -1,0 +1,28 @@
+@font-face {
+    font-family:'TrueLies'; /*font 이름*/
+    font-style: normal; /* font 스타일 정의 (기울임, 일반) */
+    font-weight: normal; /* font 굵기 정의 */
+    /* 브라우저&디바이스 환경에 따른 font 파일 위치 정의 */
+    src: url('../font/True\ Lies.ttf');
+}
+
+
+*{
+    margin: 0; 
+    padding: 0;
+}
+body{
+    margin: 0;
+    width: 100%; 
+    font-family: 'TrueLies'; 
+    font-size: 20px;
+    /* overflow: hidden; */
+    position: relative; 
+}
+section{width: 100%;}
+video{position: absolute; width: 100%; }
+#Intro_button{position: absolute;border: 0;background-color: transparent;z-index: 2; margin-top: 50%; margin-left: 90%;}
+.Intro_text {position: absolute; width: 50%; right: 20%;}
+.Intro_text a{ text-decoration: none; color:#9DFF00;}
+.Intro_text h1 {text-align: center; font-size: 8rem;margin-top: 50%;margin-left: 10%;}
+.Intro_text a:hover{color:white; transition: 1s;}

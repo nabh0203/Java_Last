@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 4500px;
+    font-size: 18px;
+}
+header{
+    position: absolute;
+    width: 1586px;
+    height: 304px;
+    left: 167px;
+    top: 204px;
+}

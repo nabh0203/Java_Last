@@ -1,0 +1,272 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@font-face {
+    font-family:'TrueLies'; /*font 이름*/
+    font-style: normal; /* font 스타일 정의 (기울임, 일반) */
+    font-weight: normal; /* font 굵기 정의 */
+    /* 브라우저&디바이스 환경에 따른 font 파일 위치 정의 */
+    src: url('../font/True\ Lies.ttf');
+}
+
+
+
+*{margin: 0; padding: 0;}
+body{width: 1920px; height: 4000px; background-image: url(../img/Back_img2.png);background-size: 1920px 4290px; background-repeat: no-repeat; position: relative; background-color: black;}
+header{ margin-top: 285px; height: 285px;}
+dl, dt, dd, p, ul, li {margin: 0; padding: 0; box-sizing: border-box;}
+a{text-decoration: none; color: rgb(255, 255, 255);}
+button {border: none; background-color: transparent; cursor: pointer;}
+li {list-style: none;}
+#Logo{width: 200px; height:187px; position: absolute; left: 
+    300px; top: 60px;}
+header h1{
+    position: absolute;
+    font-family:'TrueLies';
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 155px;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+
+
+
+header h1:hover{
+    color: #69c500;
+    transition: all 2s;
+}
+
+.History{position: relative; width: 1920px; height: 600px;}
+.History img{
+    position: absolute;
+    width: 450px;
+    height: 400px;
+    left: 300px;
+    top: 100px;
+}
+.History p {
+    position: absolute;
+    width: 793px;
+    height: 295px;
+    left: 886px;
+    top: 150px;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 36px;
+    color: #ffffff;
+}
+.History p:hover {
+    color: #69c500;
+    transition: all 1s;
+}
+.History_video{position: relative; width: 1920px; height: 800px; margin-top: 30px; }
+.History_video video{position: absolute; left: 960px;
+    top: 400px;
+    transform: translate(-50%, -50%);border: 25px solid #88ff00;}
+#video {
+    animation-name: box_animation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+#imgbtn{width: 156px;height: 402px; position: absolute; top:180px; left: 880px;}
+
+@keyframes box_animation {
+    0%{width: 0px; height: 0px;}
+    40%{width: 0px; height: 720px;}
+    80% {width: 1280px;height: 720px;}
+}
+#product-carousel-container {
+    position: relative;
+    width: 1200px;
+    margin: auto;
+}
+
+#product-carousel {
+    height: 700px;
+    margin: 50px 0 0;
+    list-style: none;
+    position: relative;
+}
+
+#product-carousel li {
+    position: absolute;
+    left: 600px;
+    top: 0;
+    width: 200px;
+    height: 562px;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 1.3s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 1;
+}
+
+#product-carousel li.item-1 {
+    z-index: 2;
+    transform: translateX(-50%) scale(1) translate3d(0, 0, 0);
+}
+
+#product-carousel li.item-2 {
+    z-index: 1;
+    transform: translateX(-50%) scale(0.7) translate3d(240%, -10%, 0);
+}
+
+#product-carousel li.item-3 {
+    z-index: 0;
+    transform: translateX(-50%) scale(0.5) translate3d(180%, -31%, 0);
+}
+
+#product-carousel li.item-4 {
+    z-index: 0;
+    transform: translateX(-50%) scale(0.5) translate3d(-180%, -31%, 0);
+}
+
+#product-carousel li.item-5 {
+    z-index: 1;
+    transform: translateX(-50%) scale(0.7) translate3d(-240%, -10%, 0);
+}
+
+#product-carousel li:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 300px;
+    height: 735px;
+    background: url(https://www.7up.com/images/bottle-shadow.png) no-repeat 50% 85%;
+    background-size: 300px auto;
+    transform: translateX(-50%);
+    transition: 0.25s;
+}
+
+#product-carousel li:hover img {
+    transform: translateY(-15px);
+}
+
+#product-carousel li:hover:after {
+    width: 300px;
+}
+
+#product-carousel li:not(:hover) img {
+    transition: transform 0.075s ease-out;
+}
+
+#product-carousel li:not(:hover):after {
+    transition: 0.075s;
+}
+
+#product-carousel li img {
+    width: 164px;
+    height: auto;
+    margin: 150px 0 0 15px;
+    transition: transform 0.25s ease-in;
+}
+
+#product-carousel-nav .carousel-nav {
+    position: absolute;
+    top: 200px;
+    width: 200px;
+    height: 300px;
+    border: none;
+    background-color: transparent;
+    outline: 0;
+    cursor: pointer;
+}
+
+#product-carousel-nav .carousel-nav.prev {
+    left: -50px;
+}
+
+#product-carousel-nav .carousel-nav.next {
+    right: -50px;
+
+}
+
+#carousel-dots {
+    position: absolute;
+    bottom: 0;
+    width: 1200px;
+    z-index: 2;
+}
+
+#carousel-dots ul {
+    display: flex;
+    justify-content: center;
+        
+}
+
+#carousel-dots ul li {
+    display: inline-block;
+    margin: 0 15px;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+#carousel-dots ul li.active {
+    background-color: #009e5f;
+}
+
+.pointBg {background-color:#69c500; font-family: 'pretendard'; font-weight: 100;}
+.whiteText {color: white; }
+.titleText {font-size: 30px;}
+.bigText {font-size: 20px;}
+.smallText {font-size: 14px;}
+.slogun-container {width: 1440px;margin: 300px auto;}
+.arrow {position: absolute; top: -50px; right: 0; width: 31px; height: 31px;}
+.arrow.prev {right: 150px;}
+.arrow.next {right: 50px;}
+.arrow.prev:hover {background-image: url("../img/button/Frame\ 23.png"); background-repeat: no-repeat;}
+.arrow.next:hover {background-image: url("../img/button/Frame\ 22.png");
+background-repeat: no-repeat;}
+#product {overflow: hidden;}
+#product {height: 780px;}
+#product #imgSet {white-space: nowrap; height: 540px; margin-top: 40px; transition: transform 1s;}
+#product #textSet {position: relative; width: 1120px; left: 50%; margin-left: -560px;}
+#product #textSet::before {content: ""; background-color: white; width: 100%; height: 80px; position: absolute; top: -80px;}
+#product #textSet::after {content: ""; background-color: rgb(0, 0, 0); width: 100%; height: 140px; position: absolute; top: 0px;}
+#product #textSet dt {position: absolute; top: -50px; left: 50px;font-family: 'TrueLies'; font-weight:900; font-size: 34px;}
+#product #textSet dd>p {position: absolute; top: 0px; left: 0px; padding: 40px 270px 40px 300px;font-family: 'pretendard'; font-weight: 100;font-size: 30px;}
+#product #textSet dd>p>span {position: absolute; top: 40px; left: 40px;font-family: 'TrueLies'; font-weight: 900;font-size: 40px;color: #69c500;}
+#product #textSet dd .button {position: absolute; top: 50px; right: 50px; height: 45px; line-height: 45px; border-radius: 23px; padding: 0 20px; display: none;}
+#product #textSet dd .button:hover {background-color: rgb(255, 255, 255); transition: all 1s; color:black;}
+
+#product #textSet dt, #product #textSet dd>p {margin-top: 30px; opacity: 0;}
+#product #textSet dt.active, #product #textSet dd.active>p {animation: textMove 1s forwards;}
+#product #textSet dd .button.active {display: block;}
+@keyframes textMove {from {} to {margin-top: 0px; opacity: 1;}}
+
+#productList {position: absolute; top: 0; left: 0; top: -120px; left: 50%; margin-left: -45px; cursor: pointer;}
+#productList li {width: 10px; height: 10px; background-color: white; display: inline-block; margin: 0 10px; border-radius: 50%;}
+#productList li.active {background-color:#69c500;}
+
+#product #textSet dt {z-index: 1; }
+#product #textSet dd>p {z-index: 2;}
+#product #textSet dd .button {z-index: 3;}
+footer {
+    position: absolute;
+    width: 1920px;
+    height: 200px;
+    left: 166px;
+    bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+footer a {
+    margin-right: 10px;
+}
+#mini_nav{position: absolute; right: 500px;}
+footer img{margin-right: 15px;}
+#footer_Logo {
+    left: 100px;
+    width: 230.19px;
+    height: 217.36px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+}
